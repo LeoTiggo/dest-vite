@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Windows>
+	<!-- 安装目录 -->
+	<VerticalLayout>
+		<VerticalLayout width="600" height="320" roundcorner="5,5" bkimage="file='form\pic.png'">
+			<VerticalLayout float="true" pos="190,154,0,0" width="600" height="108">
+				<Label font="9" text="liutianhao安装向导" textcolor="#FFFFFFFF" />
+				<Control height="18" />
+				<Button text="快速安装" cursor="hand" name="btnInstall" font="2" roundcorner="5,5" padding="28,0,0,0" width="165" height="46" normalimage="form\btn_installation_normal.png" hotimage="form\btn_installation_normal.png" pushedimage="form\btn_installation_normal.png" disabledimage="form\btn_installation_disable.png" textcolor="0xffffffff" disabledtextcolor="0xffffffff" />
+			</VerticalLayout>
+		</VerticalLayout>
+		<VerticalLayout bkcolor="#FFFFFFFF">
+			<Control height="25" />
+			<HorizontalLayout height="32">
+				<HorizontalLayout />
+				<RichEdit width="470" height="27" font="0" name="editDir" textcolor="#FF333333" inset="10,5,2,2" bkimage="public\edit\edit0.png" autohscroll="false" bordervisible="true" bordersize="1" bordercolor="0xFFD1D1D1" focusbordercolor="0xFFD1D1D1" wantreturn="false" wantctrlreturn="false" multiline="false" />
+				<Button name="btnSelectDir" cursor="hand" text="浏览" width="81" height="27" textcolor="#FFFFFFFF" bkcolor="#FF235098" align="center" />
+				<HorizontalLayout />
+			</HorizontalLayout>
+			<HorizontalLayout height="30" padding="25,10,0,0">
+				<CheckBox name="chkShotcut" cursor="hand" width="95" height="20" text="桌面快捷方式" textcolor="#FF000000" selected="true" valign="center" align="left" textpadding="18,4,0,0" normalimage="file='checkbox.png' source='0,0,13,13' dest='0,6,13,19'" normalhotimage="file='checkbox.png' source='0,0,13,13' dest='0,6,13,19'" selectedimage="file='checkbox.png' source='0,26,13,39' dest='0,6,13,19'" selectedhotimage="file='checkbox.png' source='0,26,13,39' dest='0,6,13,19'" />
+				<Control width="15"/>
+				<CheckBox name="chkAgree" width="115" heigh="20" text="我已经阅读并同意" selected="true" textcolor="#FF000000" valign="center" align="left" textpadding="18,-4,0,0" normalimage="file='checkbox.png' source='0,0,13,13' dest='0,6,13,19'" normalhotimage="file='checkbox.png' source='0,0,13,13' dest='0,6,13,19'" selectedimage="file='checkbox.png' source='0,26,13,39' dest='0,6,13,19'" selectedhotimage="file='checkbox.png' source='0,26,13,39' dest='0,6,13,19'" />
+				<Button name="btnAgreement" valign="center" cursor="hand" width="180" heigh="20" font="10" text="用户许可协议" textpadding="0,-4,0,0" textcolor="0xff235098" align="left" />
+			</HorizontalLayout>
+			<Control />
+		</VerticalLayout>
+		<Include source="licensepage.xml" />
+
+	</VerticalLayout>
+</Windows>

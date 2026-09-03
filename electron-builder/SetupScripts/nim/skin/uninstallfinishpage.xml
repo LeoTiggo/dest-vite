@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Windows>
+	<!-- 完成 -->
+	<VerticalLayout>
+		<VerticalLayout width="600" height="320" roundcorner="5,5" bkimage="file='form\pic.png'">
+			<Control height="200" />
+			<Label font="9" width="600" align="center" textcolor="#ffffffff" height="25"  text="ASG24100卸载完成" />
+		</VerticalLayout>
+		<VerticalLayout bkcolor="#FFFFFFFF">
+
+			<Button name="btnUninstalled"  width="120" height="40"  font="6" padding="240,40,0,0" text="完 成" textcolor="#FFFFFFFF" normalimage="file='public/button/btn_global_green_80x30_normal.png' " hotimage="file='public/button/btn_global_green_80x30_hovered.png'" pushedimage="file='public/button/btn_global_green_80x30_pushed.png'"/>
+		</VerticalLayout>
+	</VerticalLayout>
+</Windows>

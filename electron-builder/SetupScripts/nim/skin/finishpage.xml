@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Windows>
+	<!-- 完成 -->
+	<VerticalLayout>
+		<VerticalLayout width="600" height="320" roundcorner="5,5" bkimage="file='form\pic.png'">
+			<Control height="200" />
+			<Label text="安装成功" font="9" width="600"  height="30" align="center" textcolor="#fffffffff" ></Label>
+		</VerticalLayout>
+		<VerticalLayout bkcolor="#FFFFFFFF" >
+			<Label name="wintips" visible="false"  font="3" padding="0,10,0,0"  width="600" align="center" text="检测到您的电脑缺失WinPcap驱动，即将为您安装～"></Label>
+			<HorizontalLayout>
+				<VerticalLayout />
+					<Button name="btnRun" text="开始使用"  font="2" padding="0,20,0,0" bkcolor="0xFF3BD02C" textcolor="0xFFFFFFFF" borderround="4,4" height="50" width="160" />
+				<VerticalLayout />
+			</HorizontalLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Windows>
