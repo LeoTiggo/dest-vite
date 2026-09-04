@@ -39,3 +39,22 @@ jobs:
         with:
           name: dist-files
           path: dists/ # vite是dist，vue-cli是dist，react CRA是build
+          # path: dist/*.{exe,zip,yml,blockmap}
+
+  release:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          files: |
+            artifacts/dist-files/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
