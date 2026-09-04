@@ -6,6 +6,8 @@ permissions:
 on:
   push:
     branches: [ main ]
+    tags:
+      - v*.*.*
   workflow_dispatch: # 网页上可以手动点击运行
 
 jobs:
