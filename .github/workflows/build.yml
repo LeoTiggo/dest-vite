@@ -24,7 +24,9 @@ jobs:
       # 3.安装依赖 + 打包
       - name: Install dependencies & Build
         run: |
-          npm ci # npm ci比npm install更快，且更稳定
+          npm install -g pnpm # 安装pnpm
+          pnpm install # 安装依赖
+          # npm ci # npm ci比npm install更快，且更稳定
           # npm install
           npm run build:win
 
