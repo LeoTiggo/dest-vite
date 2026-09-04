@@ -1,0 +1,36 @@
+name: Build & Package
+
+# 触发条件：推送到main分支、手动触发
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # 网页上可以手动点击运行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1.拉取仓库代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2.安装Node环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm' # 缓存依赖，加快下次构建
+
+      # 3.安装依赖 + 打包
+      - name: Install dependencies & Build
+        run: |
+          npm ci # npm ci比npm install更快，且更稳定
+          # npm install
+          npm run build:win
+
+      # 4.上传打包产物（Artifacts，构建完可以下载）
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: dists/ # vite是dist，vue-cli是dist，react CRA是build
