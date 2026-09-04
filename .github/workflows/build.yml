@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies & Build
         run: |
           pnpm install --frozen-lockfile
-          pnpm run build:win
+          pnpm run build:prod
 
       # 5.上传打包产物（Artifacts，构建完可以下载）
       - name: Upload build artifact
