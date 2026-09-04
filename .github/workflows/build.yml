@@ -1,5 +1,7 @@
 name: Build & Package
 
+permissions:
+  contents: write
 # 触发条件：推送到main分支、手动触发
 on:
   push:
