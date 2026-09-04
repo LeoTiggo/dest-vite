@@ -28,7 +28,7 @@ jobs:
           pnpm install # 安装依赖
           # npm ci # npm ci比npm install更快，且更稳定
           # npm install
-          npm run build:win
+          pnpm run build:win
 
       # 4.上传打包产物（Artifacts，构建完可以下载）
       - name: Upload build artifact
